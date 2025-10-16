@@ -131,6 +131,9 @@ is harmless on CPU systems.
 
 Use pip freeze > requirements_tf1_pinn.txt to snapshot current versions for archival purposes.
 
+## Project structure
+
+```text
 📂 Project Structure
 Physics-Informed-Neural-Networks-for-Power-Systems/
 │
@@ -145,5 +148,9 @@ Physics-Informed-Neural-Networks-for-Power-Systems/
 │   ├── visualize_swing_results.py      # Contour visualization
 │   └── visualize_swing_2x2.py          # 2×2 δ–ω publication figure
 │
-└── (optional) run_pinn_tf1.bat         # One-click launcher
+└── run_pinn_tf1.bat                    # Optional: one-click launcher
+```
+
+
+
 
