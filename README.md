@@ -30,6 +30,7 @@ When publishing results based on this data/code, please cite:
     primaryClass={eess.SY}
 }
 
+---
 
 # Contents from Albert
 
@@ -58,31 +59,28 @@ The framework combines the physical model residuals with data-driven learning to
 The project runs under a dedicated Conda environment named **`tf1-pinn`**.
 
 Clone this repository and move into it:
-   ```bash
     git clone <your_repo_url>
     cd "Physics-Informed-Neural-Networks-for-Power-Systems"
 
 
-#Create the Conda environment (first time only):
-
-conda env create -f environment.yml
-
-
-#Activate the environment:
-
-conda activate tf1-pinn
+Create the Conda environment (first time only):
+     conda env create -f environment.yml
 
 
-#The environment.yml file pins all required versions (Python 3.7, TensorFlow 1.15, SciPy 1.4.1, NumPy 1.18.5, etc.) for long-term reproducibility.
+Activate the environment:
+    conda activate tf1-pinn
 
-#Running the PINN Inference
+
+The environment.yml file pins all required versions (Python 3.7, TensorFlow 1.15, SciPy 1.4.1, NumPy 1.18.5, etc.) for long-term reproducibility.
+
+Running the PINN Inference
 
 Navigate to the continuous-time inference module and execute the training script:
 
 cd "continuous_time_inference"
 python swingEquation_inference.py
 
-#During training, you’ll see iterative loss updates such as:
+During training, you’ll see iterative loss updates such as:
 
 Loss: 2.64e-06
 Training time: 32.12 s
