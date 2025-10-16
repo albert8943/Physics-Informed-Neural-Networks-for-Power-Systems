@@ -149,8 +149,9 @@ if __name__ == "__main__":
     N_f = 8000
     layers = [2, 10, 10, 10, 10, 10, 1]
 
-    data = scipy.io.loadmat('../Data/swingEquation_inference.mat')
-    
+    #data = scipy.io.loadmat('......\Data\swingEquation_inference.mat')
+    data = scipy.io.loadmat(r"D:\Albert_OneDrive\OneDrive\1_Projects\PINN_based_TSA_and_H_D_Estimation\PINN Python Projects\Physics-Informed-Neural-Networks-for-Power-Systems\Data\swingEquation_inference.mat")
+
     t = data['t'].flatten()[:,None]
     x = data['x'].flatten()[:,None]
     Exact = np.real(data['usol']).T
@@ -203,6 +204,11 @@ if __name__ == "__main__":
     print('Training time: %.4f' % (elapsed))
     
 
+    # === Save results for visualization ===
+    np.savez("swing_PINN_results.npz",
+            X=X, T=T, Exact=Exact, U_pred=U_pred,
+            error_u=error_u)
+    print("✅ Results saved to swing_PINN_results.npz")
 
     
 
